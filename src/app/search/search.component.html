@@ -1,0 +1,32 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate" color='warn'></mat-progress-bar>
+<div class="search-wrapper">
+    
+    <mat-card>
+            <div class="upper-body-wrapper">
+                
+            <input class="search-box"
+                matInput 
+                type="text" 
+                placeholder="Search" 
+                [(ngModel)]="searchText"
+                (keyup.enter)="search()">
+            <button type="submit" (click)="search()" class="searchButton">
+                <mat-icon matSuffix>search</mat-icon>
+            </button>
+            <button mat-raised-button class="clear-button" (click)="clear()" >Clear</button>
+            </div>
+            <div class="lower-body-wrapper">
+                <div class="search-result-wrapper">
+                    <div class="search-result-list" *ngFor="let item of searchResult">
+                        <div class="first-row">
+                            <div class="title"> <a href={{item.url}} target="_blank">{{item.title}}</a> </div>
+                        </div>
+                        <!-- <div class="second-row">
+                            <div class="created">Created: {{item.created | date:'medium' }}</div>
+                            <div class="author">Author: {{item.author}}</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </mat-card> 
+</div>

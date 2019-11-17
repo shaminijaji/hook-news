@@ -1,0 +1,32 @@
+body {
+    font-family: "Inter UI", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #252529;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    
+}
+
+.header{
+    background-color: #0772B3;
+    color: #ffffff;
+    .header-link-wrapper {
+        margin-left: 120px;
+        .header-link {
+            padding: 0 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.body-wrapper{
+    background-color: #f3f3f3;
+    height: 100%;
+}
